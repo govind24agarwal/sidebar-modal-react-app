@@ -1,13 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(120, 204, 95, 0.199);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/*
+===========
+SIDEBAR
+=============
+*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  max-width: 400px;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-100%);
+}
+
+.show-sidebar {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: rgb(180, 168, 115);
+}
+
+.close-sidebar {
+  font-size: 1.4rem;
+}
+
+.link {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.link a {
+  padding: 0.85rem 1rem;
+  width: 100%;
+  color: rgb(122, 115, 81);
+}
+.link a:hover {
+  background-color: rgba(49, 83, 39, 0.384);
+  color: white;
+  padding: 0.85rem 2rem;
+  transition: padding 0.2s linear;
 }

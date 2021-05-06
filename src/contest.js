@@ -1,8 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  return <AppContext.Provider value="">{children}</AppContext.Provider>;
+  const [showSidebar, setShowSidebar] = useState(false);
+  const openSidebar = () => {
+    setShowSidebar(true);
+  };
+  const closeSidebar = () => {
+    setShowSidebar(false);
+  };
+  return (
+    <AppContext.Provider value={{ showSidebar, openSidebar, closeSidebar }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {
